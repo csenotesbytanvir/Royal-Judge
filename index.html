@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Royal Judge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Orbitron', 'sans-serif'],
+              mono: ['Fira Code', 'monospace'],
+            },
+            colors: {
+              'royal-purple': {
+                'DEFAULT': '#3c1e70',
+                'light': '#5a3b9f',
+                'dark': '#2a1250'
+              },
+              'royal-gold': {
+                'DEFAULT': '#ffd700',
+                'dark': '#cca300'
+              },
+              'cyber-blue': '#00f2ff',
+              // Dark theme colors
+              'dark-bg': '#0a0a10',
+              'dark-surface': '#141420',
+              // Light theme colors
+              'light-bg': '#f0f2f5',
+              'light-surface': '#ffffff',
+              'light-text': '#1f2937',
+              'light-text-secondary': '#6b7280',
+            },
+            animation: {
+              'gradient-bg': 'gradient-bg 15s ease infinite',
+              'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              'gradient-bg': {
+                '0%, 100%': {
+                  'background-position': '0% 50%',
+                },
+                '50%': {
+                  'background-position': '100% 50%',
+                },
+              },
+            }
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-light-bg dark:bg-dark-bg text-light-text dark:text-gray-200 font-sans transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
